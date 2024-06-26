@@ -1,0 +1,292 @@
+.student_searchbar{
+  background-color: #222222;
+  position: sticky;
+}
+.sort_div,.filter_div {
+  background-color: #373737;
+  border-radius: 10px;
+  color: #dfe9ff;
+  width: 110px;
+  text-transform: capitalize;
+  height: 40px;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  position: relative;
+}
+.filter_div{
+  width: 130px;
+  font-weight: 500;
+  z-index: 5;
+}
+.sort_dropdown {
+  background-color: #373737;
+  border-radius: 10px;
+  width: 150px;
+  height: 120px;
+  position: absolute;
+  right: 0;
+  top: 42px;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 1;
+  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.filter_dropdown{
+  height: 80px;
+}
+.sort_dropdown_none {
+  display: none;
+}
+.sort_ul{
+  z-index: 10;
+}
+.sort_dropdown_none .sort_ul {
+  display: none;
+}
+.sort_ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+}
+.sort_li {
+  font-size: 1rem;
+  font-weight: 600;
+  width: 90%;
+  border-bottom: 1px solid #dfe9ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.sort_li:nth-child(3) {
+  border-bottom: none;
+}
+.filter_li:nth-child(2){
+  border-bottom: none;
+}
+.sort_name {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight:600;
+}
+.sort_img {
+  width: 15px;
+  height: 15px;
+  filter: invert();
+}
+.check_img {
+  width: 15px;
+  height: 15px;
+}
+.check_img_none {
+  width: 0;
+  height: 0;
+}
+.year_field{
+  position: absolute;
+  top: 10px;
+  left:-1px;  
+  width:55px;
+  height: 30px;
+  color: #aca9a9;
+  /* z-index: -10; */
+  font-size: 1rem;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.dashboard_bottom_student {
+  width: 100%;
+  height: fit-content;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.center_div {
+  width: 95%;
+  height: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.card {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: #373737;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  margin-right: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.card:hover {
+  text-decoration: none;
+  border-color: #4a71fc;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.card-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #dfe9ff;
+  height: 180px;
+  width: 100%;
+  margin-top: 20%;
+  border-radius: 10px;
+  padding-top: 50px;
+}
+.card_img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #373737;
+  position: absolute;
+  top: 10px;
+  left: 32%;
+  background-color: #dfe9ff;
+}
+.card_student_name {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+  width: 90%;
+  text-align: center;
+  color: #4a71fc;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+.card_company_name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: #373737;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+}
+.card_company_role {
+  font-size: 18px;
+  font-weight: 600;
+  color: #463f3a;
+  margin: 0;
+  width: 90%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card_student_skills {
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 10px;
+  color: #463f3a;
+  width: 90%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  /* display: flex;
+  justify-content: space-between; */
+}
+.no_Records{
+  color: #eb5757;
+  font-weight: 700;
+}
+.card_span {
+  color: #333333;
+  font-weight: 700;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  z-index: 100;
+}
+::-webkit-scrollbar-track {
+  background: #333333;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a71fc;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f8b117;
+}
+@media screen and (max-width: 969px) {
+  .card {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.loading_div {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: 800;
+  font-family: monospace;
+  font-size: 35px;
+  color: #0000;
+  background: linear-gradient(90deg, #4a71fc calc(50% + 0.5ch), #fff 0)
+    right/calc(200% + 1ch) 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: l7 2s infinite steps(11);
+}
+.loader:before {
+  content: "Loading...";
+}
+@keyframes l7 {
+  to {
+    background-position: left;
+  }
+}
